@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void moveZeroes(int* nums, int numsSize){
+void moveZeroes_old(int* nums, int numsSize){
     int *low,*high;
     low = nums + numsSize - 1;
     high = nums + numsSize - 1;
@@ -12,6 +12,20 @@ void moveZeroes(int* nums, int numsSize){
             }
         }
         low--;
+    }
+}
+
+void moveZeroes(int* nums, int numsSize){
+    int *low = nums,*high = nums;
+    for (; high < nums+numsSize; high++) {
+        if(0 == *high){
+            continue;
+        }
+        *low = *high;
+        low++;
+    }
+    for (; low < nums+numsSize; low++) {
+        *low = 0;
     }
 }
 
