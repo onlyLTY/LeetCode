@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 
-int* plusOne(int* digits, int digitsSize, int* returnSize){
+int* plusOne_old(int* digits, int digitsSize, int* returnSize){
     int i = 1;
     while (1){
         if (digits[digitsSize - i] != 9){
@@ -39,6 +39,19 @@ int* plusOne(int* digits, int digitsSize, int* returnSize){
 
 
     return returnNum;
+}
+int i = 0;
+int* plusOne(int* digits, int digitsSize, int* returnSize){
+    if (digits[digitsSize - i] + 1 == 0)
+    {
+        digits[digitsSize - i] = 0;
+        i += 1;
+        plusOne(digits, digitsSize, returnSize);
+    }
+    else
+    {
+        digits[digitsSize - i] += 1;
+    }
 }
 
 int main(){
