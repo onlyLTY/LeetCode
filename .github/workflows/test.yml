@@ -1,6 +1,8 @@
 name: Verify Push Permissions
 on:
   push:
+    branches:
+      - main
 
 jobs:
   autogreen:
