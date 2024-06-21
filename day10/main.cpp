@@ -46,11 +46,12 @@ public:
 };
 
 int main() {
-    vector<vector<int>> v = {{1,2,3}, {1,1,3}, {1,2,3}};
-    Solution solution;
-    vector<int> re = solution.smallestRange(v);
-    for (int i : re) {
-        cout << i << " ";
-    }
+//    vector<vector<int>> v = {{1,2,3}, {1,1,3}, {1,2,3}};
+//    Solution solution;
+//    vector<int> re = solution.smallestRange(v);
+//    for (int i : re) {
+//        cout << i << " ";
+//    }
+    char *a = "ss";
     return 0;
 }
