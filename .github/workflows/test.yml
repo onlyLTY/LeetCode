@@ -29,6 +29,8 @@ jobs:
       - name: Push changes
         run: |
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git push origin HEAD:main
+          git pull --rebase
+          git commit --allow-empty -m "自动点绿"
+          git push
 
 
